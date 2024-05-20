@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Personal website</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/07c058c844.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="Site/logo2.png" class="logo">
+                    <ul>
+                        <li><a href="#header">HOME</a></li>
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="#project">PROJECT</a></li>
+                        <li><a href="#gallery">GALLERY</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <p>BSCS student</p>
+                    <h1>Hi, I'm <span>Ricky Pitarte</span><br>From Philippines</h1>
+                </div>
+            </div>
+        </div>
+       <!-----------about--------- --> 
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="Site/about2.jpg">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>  	Hi, I’m Ricky T. Pitarte student of BSCS and to become a professional web designer/developer.
+                            This my personal website to improve my basic skills in programming, which I was excited to share with you through this website.
+                         </p>
+
+                         <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('trips')">Trips</p>
+                            <p class="tab-links" onclick="opentab('hobbies')">Hobbies</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                         </div>
+                         <div class="tab-contents active-tab" id="trips">
+                            <ul>
+                                <li><span>Foodtrip</span><br>Fiesta, Birthday, occasion party.</li>
+                                <li><span>Roadtrip</span><br>Part of Mindanao in  the Philippines.</li>
+                                <li><span>Fieldtrip</span><br> In Beach, in the Mountain, and the Forest.</li>
+                            </ul>
+                         </div>
+                         <div class="tab-contents" id="hobbies">
+                            <ul>
+                                <li><span>Outdoor Game</span><br>Basketball, Vollyball, Baseball.</li>
+                                <li><span>Coffee</span><br>Milk Chocolate, 3n1 Coffee, Caramel.</li>
+                                <li><span>WatchingTV</span><br>Blockbuster, Hollywood, PBO, Comedy Movie.</li>
+                            </ul>
+                         </div>
+                         <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2022/2023</span><br>Studying of Introduction/Fundamental in Programming in JRMSU-K.</li>
+                                <li><span>2023/2024</span><br>Making Website and Database in same Campus.</li>
+                            </ul>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ----------project---------- -->
+        <div id="project">
+            <div class="container">
+                <h1 class="sub-title">My Project</h1>
+                <div class="project-list">
+                    <div>
+                        <i class="fa-solid fa-file"></i>
+                        <h2>Personal Website</h2>
+                        <p>This website is all about myself. To inform my viewers and to give the feedback/comment. That base in their reaction of my website. </p>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-table"></i>
+                        <h2>Database</h2>
+                        <p>Make a database to store all important data in a file that contain in a system</p>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <!-- -------------gallery---------- -->
+        <div id="gallery">
+            <div class="container">
+                <h1 class="sub-title">My Gallery</h1>
+                <div class="photos-list">
+                    <div class="photos">
+                      <img src="Site/picture1 (2).jpg">
+                    </div>
+                    <div class="photos">
+                        <img src="Site/picture4 (2).jpg">
+                    </div>
+                    <div class="photos">
+                        <img src="Site/picture3 (2).jpg">
+                    </div>
+                    <div class="photos">
+                        <img src="Site/picture5.jpg">
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <!-- ------contact------- -->
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <p><i class="fa-solid fa-paper-plane"></i> pitartericky93@gmail.com</p>
+                        <p><i class="fa-solid fa-square-phone"></i> 09079223185</p>
+                        <div class="social-icons">
+                            <a href="htpps://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                            <a href=""><i class="fa-brands fa-twitter-square"></i></a>
+                            <a href=""><i class="fa-brands fa-instagram"></i></a>
+                            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                        <a href="Site/my-cv.pdf.pdf" download class="btn btn2">None</a>
+                    </div>
+                        <div class="contact-right">
+                            <form name="submit-to-google-sheet">
+                                <input type="text" name="Name" placeholder="Your Name" required>
+                                <input type="email" name="Email" placeholder="Your Email" required>
+                                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                                <button type="submit" class="btn btn2">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>Copyright &copy; Ricky <i class="fa-solid fa-like"></i></p>
+                </div>
+            </div>
+
+        <script>
+
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab")
+            }
+
+        </script>
+
+        <script>
+
+            var sidemue = document.getElementById("sidemenu");
+
+            function openmenu() {
+                sidemeu.style.right = "0";
+
+            }
+            function closemenu() {
+                sidemeu.style.right = "-200px";
+
+            }
+
+        </script>
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbz0a_85m_6ZvJVAAMJpX7WBYLu69rrbC2PotN6XaSk72f54fV1bQLvS-fIllOk4GW4h/exec'
+            const form = document.forms['submit-to-google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
+    </body>
+</html>
